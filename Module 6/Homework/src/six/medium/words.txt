@@ -1,0 +1,5 @@
+Java is a popular programming language. Java is used worldwide.
+Many developers use Java for building applications.
+The Java language is simple, secure, and fast.
+Java provides a rich set of APIs for developers.
+Programming in Java is fun and powerful.
