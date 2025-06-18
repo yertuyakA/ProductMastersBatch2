@@ -1,12 +1,12 @@
-package org.example;
+package main.java.org.example;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.model.StudentAttendanceDto;
-import org.example.util.AttendanceNameUtil;
+import main.java.org.example.model.StudentAttendanceDto;
+import main.java.org.example.util.AttendanceNameUtil;
 
 import java.io.*;
 import java.sql.*;
@@ -111,14 +111,14 @@ public class StudentAttendanceServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        StudentAttendanceDto newStudentAttendanceInfo  = StudentAttendanceDto.builder()
-//                .name(req.getParameter("name"))
-//                .groupName(req.getParameter("groupName"))
-//                .isAttended(Boolean.parseBoolean(req.getParameter("isAttended")))
-//                .build();
+        StudentAttendanceDto newStudentAttendanceInfo = StudentAttendanceDto.builder()
+                .name(req.getParameter("name"))
+                .groupName(req.getParameter("groupName"))
+                .isAttended(Boolean.parseBoolean(req.getParameter("isAttended")))
+                .build();
 //        list.add(newStudentAttendanceInfo);
 //        saveToFile(newStudentAttendanceInfo);
-//
-//        resp.sendRedirect("/ServletPractice/attendance");
+
+        resp.sendRedirect("/ServletPractice/attendance");
     }
 }
