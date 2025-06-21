@@ -6,4 +6,6 @@ public class UserDataCloudDataSource implements DataSource<UserData>{
     public UserData getData() {
         return new UserData(2, "Said", "email@gmail.com");
     }
+public class UserDataCloudDataSource {
+
 }

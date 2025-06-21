@@ -15,8 +15,6 @@ public class Main {
         GeoData geoData = geoDataDataSource.getData();
         System.out.println(myData.toString());
         System.out.println(geoData.toString());
-        System.out.println();
-
 
         UserData userData = userDataDataSource.getData();
         System.out.println(userData.toString());

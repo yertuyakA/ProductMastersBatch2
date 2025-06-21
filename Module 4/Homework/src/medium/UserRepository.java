@@ -6,5 +6,4 @@ public class UserRepository extends Repository<UserData>{
             MutableDataSource<UserData> cachedDataSource, DataSource<UserData> cloudDataSource) {
         super(cachedDataSource, cloudDataSource);
     }
-
 }
