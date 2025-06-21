@@ -13,7 +13,7 @@ public class GeoData {
 
     @Override
     public String toString() {
-        return "medium.lesson.GeoData{" +
+        return "GeoData{" +
                 "id=" + id +
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
