@@ -1,4 +1,4 @@
-package org.example.lesson;
+package main.java.org.example.lesson;
 
 import java.io.BufferedReader;
 import java.io.IOException;

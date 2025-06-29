@@ -9,12 +9,28 @@ import org.springframework.context.annotation.Scope;
 public class DependencyInjectorConfig {
 
     @Bean
-    public PaymentProcessor paymentProcessor() {
+    public PaymentProcessor visaCardPaymentProcessor() {
         return new VisaCardPaymentProcessor();
     }
 
     @Bean
-    @Scope(BeanDefinition.SCOPE_SINGLETON)
+    public PaymentProcessor masterCardPaymentProcessor() {
+        return new MasterCardPaymentProcessor();
+    }
+
+    @Bean
+    public PaymentProcessor bitcoinPaymentProcessor() {
+        return new BitcoinPaymentProcessor();
+    }
+
+    @Bean
+    public PaymentProcessor plovCoinPaymentProcessor() {
+        return new PlovCoinPaymentProcessor();
+    }
+
+
+    @Bean
+    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public OrderService orderService() {
         return new OrderService();
     }

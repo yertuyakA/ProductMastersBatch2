@@ -16,5 +16,9 @@ public class Main {
 
         OrderService orderServiceSecond = context.getBean(OrderService.class);
         orderServiceSecond.makeOrder(BigDecimal.valueOf(15));
+
+        System.out.println(orderService);
+        System.out.println(orderServiceSecond);
+        System.out.println(orderService==orderServiceSecond);
     }
 }
