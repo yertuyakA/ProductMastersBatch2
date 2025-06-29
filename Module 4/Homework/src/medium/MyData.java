@@ -10,6 +10,6 @@ public class MyData {
     }
 
     public String toString() {
-        return "medium.lesson.MyData: id = " + id + ", description = " + description;
+        return "MyData: id = " + id + ", description = " + description;
     }
 }
