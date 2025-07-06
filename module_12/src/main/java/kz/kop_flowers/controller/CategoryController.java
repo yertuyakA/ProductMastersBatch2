@@ -20,9 +20,7 @@ public class CategoryController {
     }
 
     @PostMapping()
-    public CategoryDto createCategory(
-            @RequestBody CategoryDto categoryDto
-    ) {
+    public CategoryDto createCategory(@RequestBody CategoryDto categoryDto) {
         return categoryService.createCategory(categoryDto);
     }
 }

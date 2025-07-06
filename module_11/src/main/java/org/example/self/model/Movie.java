@@ -1,4 +1,4 @@
-package org.example.hw.model;
+package org.example.self.model;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

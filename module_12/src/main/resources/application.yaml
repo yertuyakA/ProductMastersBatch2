@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/flowers_db
-    username: postgres
+    url: jdbc:postgresql://localhost:5432/flower_db
+    username: said
     password: postgres
     driver-class-name: org.postgresql.Driver
 

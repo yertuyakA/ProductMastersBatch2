@@ -11,4 +11,10 @@ public interface FlowerService {
     FlowerDto getFlowerById(Integer id);
 
     FlowerDto createFlower(FlowerDto flower);
+
+    FlowerDto deleteFlower(Integer id);
+
+    List<FlowerDto> getFlowersByCategory(Integer id);
+
+    FlowerDto updateFlower(Integer id, FlowerDto flower);
 }
