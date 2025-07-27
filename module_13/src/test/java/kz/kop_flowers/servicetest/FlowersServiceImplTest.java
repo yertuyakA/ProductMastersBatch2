@@ -1,4 +1,4 @@
-package kop_flowers;
+package kz.kop_flowers.servicetest;
 
 import kz.kop_flowers.model.FlowerMapper;
 import kz.kop_flowers.model.dto.CategoryDto;

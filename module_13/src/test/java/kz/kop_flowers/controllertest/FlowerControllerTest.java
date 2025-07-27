@@ -1,11 +1,10 @@
-package kop_flowers;
+package kz.kop_flowers.controllertest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kz.kop_flowers.controller.FlowerController;
 import kz.kop_flowers.model.dto.CategoryDto;
 import kz.kop_flowers.model.dto.FlowerDto;
 import kz.kop_flowers.service.FlowerService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,16 +29,16 @@ class FlowerControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-//    @Autowired
-//    private FlowerService flowerService;
-
-    private FlowerService flowerService;
-
-    @BeforeEach
-    void setUp() {
-        flowerService = Mockito.mock(FlowerService.class);
+    @TestConfiguration
+    static class MockConfig {
+        @Bean
+        public FlowerService flowerService() {
+            return Mockito.mock(FlowerService.class);
+        }
     }
 
+    @Autowired
+    private FlowerService flowerService;
 
     @Autowired
     private ObjectMapper objectMapper;
