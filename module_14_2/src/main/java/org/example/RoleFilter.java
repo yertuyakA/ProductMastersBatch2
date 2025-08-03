@@ -23,7 +23,7 @@ public class RoleFilter implements Filter {
                 && "teacher".equalsIgnoreCase((String) session.getAttribute("role"))) {
             chain.doFilter(request, response);
         } else {
-            resp.getWriter().println("У вас нет доступа к этой странице");
+            resp.getWriter().println("You have no access to this page.");
         }
     }
 }

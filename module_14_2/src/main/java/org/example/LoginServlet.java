@@ -61,11 +61,11 @@ public class LoginServlet extends HttpServlet {
 
                 resp.sendRedirect("/ServletPractice/attendance");
             } else {
-                resp.getWriter().println("Неверный логин или пароль");
+                resp.getWriter().println("Incorrect username or password.");
             }
 
         } catch (SQLException e) {
-            resp.getWriter().println("Что-то пошло не так:(");
+            resp.getWriter().println("Something went wrong");
             throw new RuntimeException(e);
         }
 
