@@ -29,9 +29,9 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
         http.authorizeHttpRequests(auth ->
-                        auth.requestMatchers(HttpMethod.GET, "/api/flowers/", "/api/flowers/**").authenticated()
+                        auth.requestMatchers(HttpMethod.GET, "/api/flowers/", "/api/flowers/**", "/api/category/all").authenticated()
                                 .requestMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
-                                .requestMatchers(HttpMethod.POST, "/api/flowers").hasRole("ADMIN")
+                                .requestMatchers(HttpMethod.POST, "/api/flowers", "/api/category", "/api/auth/migrate-passwords").hasRole("ADMIN")
                                 .anyRequest().authenticated())
                 .csrf(AbstractHttpConfigurer::disable)
                 .authenticationProvider(authenticationProvider())

@@ -9,8 +9,3 @@ public class FlowersApplication {
         SpringApplication.run(FlowersApplication.class, args);
     }
 }
-
-
-// Flowers (id, name, price, size, category_id)
-// Category (id, name)
-// Tags (id, flower_id, tag_name)
